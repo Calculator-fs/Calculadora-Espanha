@@ -593,9 +593,17 @@
         /* ─── PARCERIA MODAL ─── */
         .parceria-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 22px;
             align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .parceria-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 580px) {
+            .parceria-grid { grid-template-columns: 1fr; }
         }
 
         .parceria-card {
@@ -693,7 +701,6 @@
             .quantity-control { width: 100%; justify-content: center; }
             .modal-content { margin: 14px; padding: 22px; }
             .modal-title { font-size: 1.6em; }
-            .parceria-grid { grid-template-columns: 1fr; }
             .uniform-grid { grid-template-columns: 1fr; }
             .total-amount { font-size: 2.2em; }
         }
@@ -971,32 +978,32 @@
                 </div>
             </div>
 
-            <!-- Área de Risco 21 -->
+            <!-- Eclipse - Área de Risco 21 -->
             <div class="parceria-card">
-                <div class="parceria-name">⚠️ Área de Risco 21</div>
+                <div class="parceria-name">🌙 Eclipse</div>
                 <div class="parceria-info">
                     <span class="parceria-tag">📍 Área de Risco: 21</span>
                     <span class="parceria-tag yellow">⚙️ Munição & LSD</span>
                 </div>
                 <div class="parceria-imgs">
-                    <img src="https://i.imgur.com/Rr6z9xW.png" alt="AR21" onerror="this.src='https://i.imgur.com/Rr6z9xW.jpg'">
+                    <img src="https://i.imgur.com/Rr6z9xW.png" alt="Eclipse" onerror="this.src='https://i.imgur.com/Rr6z9xW.jpg'">
                     <p class="img-caption">📊 Tabela de Preços</p>
-                    <img src="https://i.imgur.com/ox0QBBu.png" alt="AR21 Tabela 1" onerror="this.src='https://i.imgur.com/ox0QBBu.jpg'">
-                    <img src="https://i.imgur.com/6bQgik3.png" alt="AR21 Tabela 2" onerror="this.src='https://i.imgur.com/6bQgik3.jpg'">
+                    <img src="https://i.imgur.com/ox0QBBu.png" alt="Eclipse Tabela 1" onerror="this.src='https://i.imgur.com/ox0QBBu.jpg'">
+                    <img src="https://i.imgur.com/6bQgik3.png" alt="Eclipse Tabela 2" onerror="this.src='https://i.imgur.com/6bQgik3.jpg'">
                 </div>
             </div>
 
-            <!-- Área de Risco 13 -->
+            <!-- Ghost - Área de Risco 13 -->
             <div class="parceria-card">
-                <div class="parceria-name">⚠️ Área de Risco 13</div>
+                <div class="parceria-name">👻 Ghost</div>
                 <div class="parceria-info">
                     <span class="parceria-tag">📍 Área de Risco: 13</span>
                     <span class="parceria-tag yellow">⚙️ Munição & LSD</span>
                 </div>
                 <div class="parceria-imgs">
-                    <img src="https://i.imgur.com/pfnuInl.png" alt="AR13" onerror="this.src='https://i.imgur.com/pfnuInl.jpg'">
+                    <img src="https://i.imgur.com/pfnuInl.png" alt="Ghost" onerror="this.src='https://i.imgur.com/pfnuInl.jpg'">
                     <p class="img-caption">📊 Tabela de Preços</p>
-                    <img src="https://i.imgur.com/s4sLDB8.png" alt="AR13 Tabela" onerror="this.src='https://i.imgur.com/s4sLDB8.jpg'">
+                    <img src="https://i.imgur.com/s4sLDB8.png" alt="Ghost Tabela" onerror="this.src='https://i.imgur.com/s4sLDB8.jpg'">
                 </div>
             </div>
 
