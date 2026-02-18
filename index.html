@@ -593,16 +593,21 @@
         /* ─── PARCERIA MODAL ─── */
         .parceria-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 28px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 22px;
+            align-items: start;
         }
 
         .parceria-card {
             background: rgba(35,12,12,0.65);
             border: 2px solid rgba(220,38,38,0.3);
             border-radius: 18px;
-            padding: 24px;
+            padding: 22px;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            /* height: fit-content so card hugs its content */
+            height: fit-content;
         }
 
         .parceria-card:hover {
@@ -622,7 +627,7 @@
             letter-spacing: 0.5px;
         }
 
-        .parceria-info { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .parceria-info { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 
         .parceria-tag {
             background: rgba(220,38,38,0.15);
@@ -640,10 +645,17 @@
             color: #fde68a;
         }
 
-        .parceria-imgs { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
+        .parceria-imgs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
 
         .parceria-imgs img {
             width: 100%;
+            height: auto;
+            display: block;
             border-radius: 10px;
             border: 2px solid rgba(220,38,38,0.3);
             transition: all 0.3s ease;
@@ -658,6 +670,11 @@
             text-align: center;
             margin-top: -4px;
             font-style: italic;
+        }
+
+        /* parceria modal override */
+        #parceModal .modal-content {
+            max-width: 1100px;
         }
 
         /* ─── SCROLLBAR ─── */
