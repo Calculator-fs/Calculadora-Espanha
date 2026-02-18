@@ -592,18 +592,8 @@
 
         /* ─── PARCERIA MODAL ─── */
         .parceria-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-            align-items: start;
-        }
-
-        @media (max-width: 900px) {
-            .parceria-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 580px) {
-            .parceria-grid { grid-template-columns: 1fr; }
+            column-count: 3;
+            column-gap: 22px;
         }
 
         .parceria-card {
@@ -612,16 +602,24 @@
             border-radius: 18px;
             padding: 22px;
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            /* height: fit-content so card hugs its content */
-            height: fit-content;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 22px;
+            break-inside: avoid;
+            box-sizing: border-box;
         }
 
         .parceria-card:hover {
             border-color: rgba(251,191,36,0.5);
             box-shadow: 0 10px 35px rgba(220,38,38,0.25);
-            transform: translateY(-4px);
+        }
+
+        @media (max-width: 900px) {
+            .parceria-grid { column-count: 2; }
+        }
+
+        @media (max-width: 580px) {
+            .parceria-grid { column-count: 1; }
         }
 
         .parceria-name {
